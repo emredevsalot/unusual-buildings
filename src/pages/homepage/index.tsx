@@ -1,13 +1,7 @@
-import {
-  AnimatePresence,
-  stagger,
-  useAnimate,
-  usePresence,
-} from "framer-motion";
+import { useAnimate, usePresence } from "framer-motion";
 import { useEffect } from "react";
-type Props = {};
 
-const Homepage = (props: Props) => {
+const Homepage = () => {
   const [isPresent, safeToRemove] = usePresence();
   const [scope, animate] = useAnimate();
 
