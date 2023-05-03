@@ -1,0 +1,60 @@
+@use "sass:math";
+
+// col-1 ... col-12 according to the 12 column design principles
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    flex: 0 0 math.div(100%,12) * $i;
+    width: math.div(100%,12) * $i;
+  }
+  @include breakpoint(tablet) {
+    .col-#{$i} {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.pl-50 {
+  padding-left: 50px;
+}
+
+.pr-50 {
+  padding-right: 50px;
+}
+
+.mr-5 {
+  margin-right: 3%;
+  @include breakpoint(mobile) {
+    margin: 0;
+  }
+}
+
+.ml-5 {
+  margin-left: 3%;
+  @include breakpoint(mobile) {
+    margin: 0;
+  }
+}
+
+.mr-tablet {
+  margin-right: 6%;
+  @include breakpoint(tablet) {
+    margin: 0;
+  }
+}
+
+.ml-tablet {
+  margin-left: 6%;
+  @include breakpoint(tablet) {
+    margin: 0;
+  }
+}

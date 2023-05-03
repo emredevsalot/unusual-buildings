@@ -1,0 +1,33 @@
+.container {
+  // max-width: 1048px;
+  max-width: 1148px;
+
+  margin: 0 auto;
+  padding: 0 70px;
+  @include breakpoint(tablet) {
+    width: 100%;
+    padding: 0 40px;
+  }
+  @include breakpoint(mobile) {
+    padding: 0 20px;
+  }
+}
+
+// White and transparent background of the navbar
+.whiteBg {
+  background: $white !important;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  color: $primary !important;
+
+  & a {
+    color: $primary !important;
+  }
+}
+.transparent {
+  background: transparent;
+  color: white;
+
+  & a {
+    color: white;
+  }
+}

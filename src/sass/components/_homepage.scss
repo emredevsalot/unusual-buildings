@@ -1,0 +1,77 @@
+.hero {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 30%;
+  padding-bottom: 30px;
+  &__button {
+    cursor: pointer;
+  }
+  &__text h3 {
+    color: $white;
+    // text-align: center;
+    margin-bottom: 0px;
+  }
+  &__icon {
+    // text-align: center;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.home2 h2 {
+  text-align: center;
+  padding: 80px 0px 30px 0px;
+}
+
+.home2__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0px;
+
+  @include breakpoint(tablet) {
+    padding: 40px 0px;
+  }
+  @include breakpoint(mobile) {
+    text-align: center;
+    flex-direction: column;
+  }
+  &.borderTop {
+    border-top: 1px solid $primary;
+  }
+  &.reverse {
+    flex-direction: row-reverse;
+    @include breakpoint(mobile) {
+      flex-direction: column;
+    }
+  }
+  &__icon {
+    width: 30%;
+    height: 250px;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include breakpoint(mobile) {
+      margin-bottom: 30px;
+      width: 120px;
+      height: 120px;
+    }
+  }
+  &__info {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+}

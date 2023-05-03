@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  //   background-color: rgb(253, 235, 200);
+  padding: 25px 0px;
+  &__p1 {
+    margin-bottom: 8px;
+    & span {
+      display: inline-block;
+    }
+  }
+}

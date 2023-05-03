@@ -1,0 +1,56 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 220px;
+  height: 50px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 1rem;
+  color: $primary;
+}
+
+.btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn svg rect {
+  stroke: $primary;
+  stroke-width: 1;
+  stroke-dasharray: 353, 0;
+  //stroke-dasharray: 277, 0;
+  stroke-dashoffset: 0;
+  -webkit-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+
+// .btn span {
+//   background: rgb(0, 0, 0);
+//   background: -moz-linear-gradient(
+//     left,
+//     rgba(0, 0, 0, 1) 0%,
+//     rgba(0, 0, 0, 1) 100%
+//   );
+//   background: -webkit-linear-gradient(
+//     left,
+//     rgba(0, 0, 0, 1) 0%,
+//     rgba(0, 0, 0, 1) 100%
+//   );
+//   background: linear-gradient(
+//     to right,
+//     rgba(0, 0, 0, 1) 0%,
+//     rgba(0, 0, 0, 1) 100%
+//   );
+//   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 );
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+// }
+
+.btn:hover svg rect {
+  stroke-width: 1;
+  stroke-dasharray: 196, 543;
+  //stroke-dashoffset: 437;
+  //   stroke-dashoffset: 390;
+  stroke-dashoffset: 470;
+}

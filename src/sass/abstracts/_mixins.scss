@@ -1,0 +1,49 @@
+@mixin bgImage($image) {
+  // Accesses public/images
+  //background: url('http://localhost:3000/images/hero-image.jpg');
+  background: url($image);
+  // Accesses src/images
+  // background: url('/images/hero-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-blend-mode: overlay;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media screen and (max-width: 600px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {...}
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {...}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {...}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {...}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {...}
