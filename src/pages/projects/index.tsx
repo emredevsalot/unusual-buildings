@@ -7,7 +7,7 @@ import ProjectsRow from "./ProjectsRow";
 // import { projectsRowData } from '../data';
 // import ProjectsRow from '../components/ProjectsRow';
 
-const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
+const transition = { duration: 1.4 /* ease: [0.6, 0.01, -0.05, 0.9] */ };
 
 const variantsProjects = {
   initial: {
@@ -15,11 +15,11 @@ const variantsProjects = {
   },
   animate: {
     opacity: 1,
-    transition: { ease: [0.6, 0.01, -0.05, 0.9] },
+    // transition: { ease: [0.6, 0.01, -0.05, 0.9] },
   },
   exit: {
     opacity: 0,
-    transition: { ease: [0.6, 0.01, -0.05, 0.9] },
+    // transition: { ease: [0.6, 0.01, -0.05, 0.9] },
   },
 };
 
@@ -50,30 +50,30 @@ const variantsInfo = {
   },
 };
 
-const variantsProjectInfo = {
-  initial: {
-    y: 30,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.5, delay: 1.9, ease: "easeInOut" },
-  },
-  exit: {
-    opacity: 0,
-    transition: { ease: "easeInOut" },
-  },
-};
+// const variantsProjectInfo = {
+//   initial: {
+//     y: 30,
+//     opacity: 0,
+//   },
+//   animate: {
+//     y: 0,
+//     opacity: 1,
+//     transition: { duration: 0.5, delay: 1.9, ease: "easeInOut" },
+//   },
+//   exit: {
+//     opacity: 0,
+//     transition: { ease: "easeInOut" },
+//   },
+// };
 
 const letter = {
   initial: { y: 150 },
   animate: { y: 0, transition: { ...transition } },
 };
 
-type Props = {};
+// type Props = {};
 
-const Projects = (props: Props) => {
+const Projects = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
