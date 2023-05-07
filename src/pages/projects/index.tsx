@@ -120,6 +120,7 @@ const Projects = () => {
           </div>
           {projectsRowData.map((project, index) => (
             <ProjectsRow
+              key={index}
               index={index}
               name={project.name}
               description={project.description}
