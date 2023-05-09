@@ -7,6 +7,7 @@ import Homepage from "./pages/homepage";
 import Projects from "./pages/projects";
 import Contact from "./pages/contact";
 import SingleProject from "./pages/singleProject";
+import PrivacyPolicy from "./pages/privacyPolicy";
 
 function App() {
   const routes = useRoutes([
@@ -17,6 +18,10 @@ function App() {
     {
       path: "/projects",
       element: <Projects />,
+    },
+    {
+      path: "/privacy-policy",
+      element: <PrivacyPolicy />,
     },
     {
       path: "/projects/:projectName",
