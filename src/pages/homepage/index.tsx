@@ -1,41 +1,13 @@
 import { useRef, useEffect } from "react";
 
 import { motion } from "framer-motion";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-import { homepageRowData } from "../../data";
+import { homepageRowData, variantsOpacity } from "../../data";
+
 import Button from "../../components/Button";
 import HomepageRow from "./HomepageRow";
-
-const variantsHero = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: { duration: 1.5, delay: 0.5 }, //ease: [0.6, 0.01, -0.05, 0.9] },
-  },
-  exit: {
-    opacity: 0,
-    transition: { delay: 0.5 }, //ease: [0.6, 0.01, -0.05, 0.9] },
-  },
-};
-const variantsHeroButton = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: { duration: 1.5, delay: 1.3 }, //ease: [0.6, 0.01, -0.05, 0.9] },
-  },
-
-  exit: {
-    opacity: 0,
-    transition: { delay: 0.5 }, //ease: [0.6, 0.01, -0.05, 0.9] },
-  },
-};
 
 const Homepage = () => {
   const developmentSection = useRef<any>(null);
@@ -52,7 +24,7 @@ const Homepage = () => {
   return (
     <>
       <motion.div
-        variants={variantsHero}
+        variants={variantsOpacity({ delay: 0.5 })}
         initial="initial"
         animate="animate"
         exit="exit"
@@ -62,7 +34,7 @@ const Homepage = () => {
         }}
       >
         <motion.div
-          variants={variantsHeroButton}
+          variants={variantsOpacity({ delay: 1.5 })}
           whileHover={{
             y: -10,
             transition: { ease: "easeInOut" },
@@ -80,7 +52,7 @@ const Homepage = () => {
       </motion.div>
 
       <motion.div
-        variants={variantsHero}
+        variants={variantsOpacity({ delay: 0.5 })}
         initial="initial"
         animate="animate"
         exit="exit"
@@ -90,6 +62,7 @@ const Homepage = () => {
           <div ref={developmentSection}></div>
           {homepageRowData.map((data, index) => (
             <HomepageRow
+              key={index}
               index={index}
               title={data.title}
               description={data.description}

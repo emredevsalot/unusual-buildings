@@ -1,22 +1,23 @@
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { variantsSlideIn } from "../../data";
 
-const variantsHomepageRow = {
-  initial: {
-    y: 30,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.8, ease: "easeInOut" },
-  },
-  exit: {
-    opacity: 0,
-    transition: { ease: "easeInOut" },
-  },
-};
+// const variantsHomepageRow = {
+//   initial: {
+//     y: 30,
+//     opacity: 0,
+//   },
+//   animate: {
+//     y: 0,
+//     opacity: 1,
+//     transition: { duration: 0.8, ease: "easeInOut" },
+//   },
+//   exit: {
+//     opacity: 0,
+//     transition: { ease: "easeInOut" },
+//   },
+// };
 
 type Props = {
   index: number;
@@ -42,7 +43,7 @@ const HomepageRow = ({ index, title, description, image }: Props) => {
   return (
     <motion.div
       ref={ref}
-      variants={variantsHomepageRow}
+      variants={variantsSlideIn({ initX: 0, initY: 30 })}
       initial="initial"
       animate={controls}
       className={`home2__row ${index % 2 === 0 ? "" : "reverse"} ${

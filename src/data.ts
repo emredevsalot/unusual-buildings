@@ -99,3 +99,44 @@ export const projectsRowData = [
     image: "url('/assets/hero-image.jpg')",
   },
 ];
+
+// Framer Motion
+
+type opacityType = {
+  delay?: number;
+};
+export const variantsOpacity = ({ delay = 0 }: opacityType) => ({
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: { duration: 1.5, delay: delay },
+  },
+  exit: { opacity: 0 },
+});
+
+type slideInType = {
+  initX: number;
+  initY: number;
+  duration?: number;
+};
+export const variantsSlideIn = ({
+  initX,
+  initY,
+  duration = 0.8,
+}: slideInType) => ({
+  initial: {
+    x: initX,
+    y: initY,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: { duration: duration, ease: "easeInOut" },
+  },
+  exit: {
+    opacity: 0,
+    transition: { ease: "easeInOut" },
+  },
+});
