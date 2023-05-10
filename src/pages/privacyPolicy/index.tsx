@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import { motion } from "framer-motion";
 
-import Footer from "../../components/Footer";
+import Footer from "@/components/Footer";
 
 const variantsPrivacyPolicy = {
   initial: {

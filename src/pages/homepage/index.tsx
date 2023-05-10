@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-import { homepageRowData, variantsOpacity } from "../../data";
+import { homepageRowData, variantsOpacity } from "@/data";
 
-import Button from "../../components/Button";
+import Button from "@/components/Button";
 import HomepageRow from "./HomepageRow";
 
 const Homepage = () => {

@@ -1,7 +1,9 @@
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
-import { variantsSlideIn } from "../../data";
+
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+import { variantsSlideIn } from "@/data";
 
 // const variantsHomepageRow = {
 //   initial: {

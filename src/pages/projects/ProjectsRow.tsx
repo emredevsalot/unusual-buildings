@@ -1,7 +1,9 @@
-import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Button from "../../components/Button";
+
+import Button from "@/components/Button";
 
 const variantsProjectRow = {
   initial: {

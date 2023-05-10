@@ -1,7 +1,10 @@
-import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { projectsRowData } from "../../data";
+
+import { motion } from "framer-motion";
+
+import { projectsRowData } from "@/data";
 import ProjectsRow from "./ProjectsRow";
+
 // import Footer from '../components/Footer';
 // import Button from '../components/Button';
 // import { projectsRowData } from '../data';

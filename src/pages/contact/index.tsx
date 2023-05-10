@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Map, Marker } from "pigeon-maps";
 
-import Footer from "../../components/Footer";
+import Footer from "@/components/Footer";
 
 const variantsContact = {
   initial: {
