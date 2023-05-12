@@ -1,7 +1,7 @@
 import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 import { variantsSlideIn } from "@/data";
 

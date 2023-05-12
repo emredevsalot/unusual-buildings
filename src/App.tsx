@@ -1,13 +1,14 @@
 import React from "react";
 import { useLocation, useRoutes } from "react-router-dom";
-import "../src/sass/main.scss";
+
 import { AnimatePresence } from "framer-motion";
 
-import Homepage from "./pages/homepage";
-import Projects from "./pages/projects";
+import "../src/sass/main.scss";
 import Contact from "./pages/contact";
-import SingleProject from "./pages/singleProject";
+import Homepage from "./pages/homepage";
 import PrivacyPolicy from "./pages/privacyPolicy";
+import Projects from "./pages/projects";
+import SingleProject from "./pages/singleProject";
 
 function App() {
   const routes = useRoutes([

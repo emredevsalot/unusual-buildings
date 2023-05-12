@@ -1,18 +1,19 @@
 import { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-
-import { motion } from "framer-motion";
 import { ReactImageGalleryItem } from "react-image-gallery";
-import parse from "html-react-parser";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link, useParams } from "react-router-dom";
+
 import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
+import parse from "html-react-parser";
 
-import { projectsData } from "@/data";
-import Slider from "@/components/Slider";
 import Footer from "@/components/Footer";
+import Slider from "@/components/Slider";
+import { projectsData } from "@/data";
+
 import Homepage from "../homepage";
 
 const variantsSingle = {

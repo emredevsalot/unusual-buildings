@@ -1,12 +1,12 @@
-import { useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-
-import { homepageRowData, variantsOpacity } from "@/data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 
 import Button from "@/components/Button";
+import { homepageRowData, variantsOpacity } from "@/data";
+
 import HomepageRow from "./HomepageRow";
 
 const Homepage = () => {
