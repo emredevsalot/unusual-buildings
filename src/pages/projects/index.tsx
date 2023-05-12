@@ -2,80 +2,16 @@ import { useEffect } from "react";
 
 import { motion } from "framer-motion";
 
-import { projectsRowData } from "@/data";
+import Footer from "@/components/Footer";
+import {
+  projectsRowData,
+  variantsOpacity,
+  variantsSlideIn,
+  variantsSlideInChild,
+  variantsStaggerParent,
+} from "@/data";
 
 import ProjectsRow from "./ProjectsRow";
-
-// import Footer from '../components/Footer';
-// import Button from '../components/Button';
-// import { projectsRowData } from '../data';
-// import ProjectsRow from '../components/ProjectsRow';
-
-const transition = { duration: 1.4 /* ease: [0.6, 0.01, -0.05, 0.9] */ };
-
-const variantsProjects = {
-  initial: {
-    // opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    // transition: { ease: [0.6, 0.01, -0.05, 0.9] },
-  },
-  exit: {
-    opacity: 0,
-    // transition: { ease: [0.6, 0.01, -0.05, 0.9] },
-  },
-};
-
-const variantsTitle = {
-  animate: {
-    y: 0,
-    transition: {
-      delay: 1,
-      delayChildren: 0.3,
-      staggerChildren: 0.03,
-    },
-  },
-};
-
-const variantsInfo = {
-  initial: {
-    y: 20,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.5, delay: 1.4, ease: "easeInOut" },
-  },
-  exit: {
-    opacity: 0,
-    transition: { delay: 0.5, ease: "easeInOut" },
-  },
-};
-
-// const variantsProjectInfo = {
-//   initial: {
-//     y: 30,
-//     opacity: 0,
-//   },
-//   animate: {
-//     y: 0,
-//     opacity: 1,
-//     transition: { duration: 0.5, delay: 1.9, ease: "easeInOut" },
-//   },
-//   exit: {
-//     opacity: 0,
-//     transition: { ease: "easeInOut" },
-//   },
-// };
-
-const letter = {
-  initial: { y: 150 },
-  animate: { y: 0, transition: { ...transition } },
-};
-
-// type Props = {};
 
 const Projects = () => {
   useEffect(() => {
@@ -84,7 +20,7 @@ const Projects = () => {
   return (
     <>
       <motion.div
-        variants={variantsProjects}
+        variants={variantsOpacity()}
         initial="initial"
         animate="animate"
         exit="exit"
@@ -94,28 +30,19 @@ const Projects = () => {
           <div className="projectsInfo">
             <div className="projectsInfo__Title">
               <h1>
-                <motion.span variants={variantsTitle}>
-                  <span>
-                    <motion.span variants={letter}>O </motion.span>
-                    <motion.span variants={letter}>u </motion.span>
-                    <motion.span variants={letter}>r </motion.span>
-                  </span>{" "}
-                  <motion.span variants={letter}> </motion.span>
-                  <span>
-                    <motion.span variants={letter}>P </motion.span>
-                    <motion.span variants={letter}>r </motion.span>
-                    <motion.span variants={letter}>o </motion.span>
-                    <motion.span variants={letter}>j </motion.span>
-                    <motion.span variants={letter}>e </motion.span>
-                    <motion.span variants={letter}>c </motion.span>
-                    <motion.span variants={letter}>t </motion.span>
-                    <motion.span variants={letter}>s </motion.span>
-                  </span>
+                <motion.span variants={variantsStaggerParent()}>
+                  {"Our Projects".split("").map((word) => (
+                    <motion.span
+                      variants={variantsSlideInChild({ initY: 350 })}
+                    >
+                      {word !== " " ? word : <>&nbsp;</>}
+                    </motion.span>
+                  ))}
                 </motion.span>
               </h1>
             </div>
 
-            <motion.p variants={variantsInfo}>
+            <motion.p variants={variantsSlideIn({ initY: 30, delay: 1.3 })}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
               quaerat blanditiis dignissimos asperiores quis quia cum officiis
               ad deserunt, eos molestiae vel totam adipisci saepe natus nam
@@ -134,7 +61,7 @@ const Projects = () => {
           ))}
         </div>
       </motion.div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

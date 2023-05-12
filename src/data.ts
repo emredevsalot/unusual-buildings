@@ -103,26 +103,32 @@ export const projectsRowData = [
 // Framer Motion
 
 type opacityType = {
+  duration?: number;
   delay?: number;
 };
-export const variantsOpacity = ({ delay = 0 }: opacityType) => ({
+export const variantsOpacity = ({
+  duration = 0.8,
+  delay = 0,
+}: opacityType = {}) => ({
   initial: { opacity: 0 },
   animate: {
     opacity: 1,
-    transition: { duration: 1.5, delay: delay },
+    transition: { duration: duration, delay: delay },
   },
   exit: { opacity: 0 },
 });
 
 type slideInType = {
-  initX: number;
-  initY: number;
+  initX?: number;
+  initY?: number;
   duration?: number;
+  delay?: number;
 };
 export const variantsSlideIn = ({
-  initX,
-  initY,
+  initX = 0,
+  initY = 0,
   duration = 0.8,
+  delay = 0,
 }: slideInType) => ({
   initial: {
     x: initX,
@@ -133,10 +139,41 @@ export const variantsSlideIn = ({
     x: 0,
     y: 0,
     opacity: 1,
-    transition: { duration: duration, ease: "easeInOut" },
+    transition: { duration: duration, delay: delay, ease: "easeInOut" },
   },
   exit: {
     opacity: 0,
     transition: { ease: "easeInOut" },
   },
+});
+
+type staggerParentType = {
+  delayChildren?: number;
+  staggerChildren?: number;
+};
+
+export const variantsStaggerParent = ({
+  delayChildren = 0,
+  staggerChildren = 0.1,
+}: staggerParentType = {}) => ({
+  animate: {
+    transition: {
+      delayChildren: delayChildren,
+      staggerChildren: staggerChildren,
+    },
+  },
+});
+
+type slideInChildType = {
+  initX?: number;
+  initY?: number;
+  duration?: number;
+};
+export const variantsSlideInChild = ({
+  initX = 0,
+  initY = 0,
+  duration = 1.4,
+}: slideInChildType = {}) => ({
+  initial: { x: initX, y: initY },
+  animate: { x: 0, y: 0, transition: { duration: duration } },
 });

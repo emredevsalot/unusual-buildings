@@ -4,22 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 
 import Button from "@/components/Button";
-
-const variantsProjectRow = {
-  initial: {
-    y: 30,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.8, ease: "easeInOut" },
-  },
-  exit: {
-    opacity: 0,
-    transition: { ease: "easeInOut" },
-  },
-};
+import { variantsSlideIn } from "@/data";
 
 type Props = {
   index: number;
@@ -43,7 +28,7 @@ const ProjectsRow = ({ index, name, description, url, image }: Props) => {
     <motion.div
       ref={ref}
       className={index % 2 === 0 ? "projectsRow" : "projectsRow reverse"}
-      variants={variantsProjectRow}
+      variants={variantsSlideIn({ initY: 150 })}
       initial="initial"
       animate={controls}
     >
