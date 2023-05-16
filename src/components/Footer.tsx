@@ -2,24 +2,12 @@ import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
-const variantsFooter = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: { delay: 0.5 },
-  },
-  exit: {
-    opacity: 0,
-    transition: { delay: 0.5 },
-  },
-};
+import { variantsOpacity } from "@/data";
 
 const Footer = () => {
   return (
     <motion.div
-      variants={variantsFooter}
+      variants={variantsOpacity({ delay: 0.5 })}
       initial="initial"
       animate="animate"
       exit="exit"

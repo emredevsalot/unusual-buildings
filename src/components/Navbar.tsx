@@ -5,6 +5,8 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 
+import { variantsOpacity } from "@/data";
+
 const Navbar = () => {
   const [scrolledNav, setScrolledNav] = useState(false);
   const [menuOpened, setMenuOpened] = useState(false);
@@ -23,23 +25,11 @@ const Navbar = () => {
   const handleMenuOpened = () => {
     setMenuOpened(!menuOpened);
   };
-  const variantsNav = {
-    initial: {
-      opacity: 0,
-    },
-    animate: { opacity: 1 },
-    exit: {
-      opacity: 0,
-      transition: {
-        /*delay: 0.5, ease: [0.6, 0.01, -0.05, 0.9]*/
-      },
-    },
-  };
 
   return (
     <motion.div
       className={`navbar ${scrolledNav ? "whiteBg" : "transparent"}`}
-      variants={variantsNav}
+      variants={variantsOpacity()}
       initial="initial"
       animate="animate"
       exit="exit"
