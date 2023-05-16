@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 import AnimatedTitle from "@/components/AnimatedTitle";
 import Footer from "@/components/Footer";
-import { variantsSlideInChild, variantsStaggerParent } from "@/data";
 
 const variantsPrivacyPolicy = {
   initial: {
