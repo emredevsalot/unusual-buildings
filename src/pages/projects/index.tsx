@@ -2,14 +2,9 @@ import { useEffect } from "react";
 
 import { motion } from "framer-motion";
 
+import AnimatedTitle from "@/components/AnimatedTitle";
 import Footer from "@/components/Footer";
-import {
-  projectsRowData,
-  variantsOpacity,
-  variantsSlideIn,
-  variantsSlideInChild,
-  variantsStaggerParent,
-} from "@/data";
+import { projectsRowData, variantsOpacity, variantsSlideIn } from "@/data";
 
 import ProjectsRow from "./ProjectsRow";
 
@@ -29,17 +24,7 @@ const Projects = () => {
         <div className="container">
           <div className="projectsInfo">
             <div className="projectsInfo__Title">
-              <h1>
-                <motion.span variants={variantsStaggerParent()}>
-                  {"Our Projects".split("").map((word) => (
-                    <motion.span
-                      variants={variantsSlideInChild({ initY: 350 })}
-                    >
-                      {word !== " " ? word : <>&nbsp;</>}
-                    </motion.span>
-                  ))}
-                </motion.span>
-              </h1>
+              <AnimatedTitle title="Our Projects" />
             </div>
 
             <motion.p variants={variantsSlideIn({ initY: 30, delay: 1.3 })}>

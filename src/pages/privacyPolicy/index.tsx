@@ -2,7 +2,9 @@ import { useEffect } from "react";
 
 import { motion } from "framer-motion";
 
+import AnimatedTitle from "@/components/AnimatedTitle";
 import Footer from "@/components/Footer";
+import { variantsSlideInChild, variantsStaggerParent } from "@/data";
 
 const variantsPrivacyPolicy = {
   initial: {
@@ -32,7 +34,13 @@ const PrivacyPolicy = () => {
         className="privacyPolicy"
       >
         <div className="container">
-          <h1>Privacy Policy</h1>
+          <div className="privacyPolicyInfo">
+            <div className="privacyPolicyInfo__Title">
+              <AnimatedTitle title="Privacy Policy" />
+            </div>
+          </div>
+          {/* <h1>Privacy Policy</h1> */}
+
           <div className="privacyPolicy__flex">
             <div className="privacyPolicy__left">
               <p>Company Name GMBH</p>

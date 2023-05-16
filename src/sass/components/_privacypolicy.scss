@@ -1,8 +1,26 @@
 .privacyPolicy {
+  span {
+    display: inline-block;
+    position: relative;
+  }
   h1 {
-    // text-align: center;
-    margin-top: 125px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+  }
+  &Info {
+    margin-top: 260px;
+    margin-bottom: 200px;
+    width: 85%;
+    @include breakpoint(laptop) {
+      text-align: center;
+      width: 100%;
+      margin-top: 150px;
+      margin-bottom: 30px;
+    }
+    &__Title {
+      margin-bottom: 20px;
+      line-height: 1;
+      overflow: hidden;
+    }
   }
   &__flex {
     display: flex;
