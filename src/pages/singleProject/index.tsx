@@ -16,18 +16,6 @@ import { projectsData } from "@/data";
 
 import Homepage from "../homepage";
 
-const variantsSingle = {
-  initial: {
-    // opacity: 0,
-  },
-  animate: {
-    // opacity: 1
-  },
-  exit: {
-    // opacity: 0,
-    // transition: { /*delay: 0.5,*/ ease: [0.6, 0.01, -0.05, 0.9] },
-  },
-};
 const variantsSingleLeft = {
   initial: {
     opacity: 0,
@@ -92,7 +80,6 @@ const SingleProject = () => {
       <>
         <motion.div
           className="single"
-          variants={variantsSingle}
           initial="initial"
           animate="animate"
           exit="exit"
@@ -108,13 +95,7 @@ const SingleProject = () => {
               <div className="laptopSlider">
                 <Slider images={images} />
               </div>
-              {/* <p> */}
-              {/* {description.map((desc, key) => (
-                    <p>{desc}</p>
-                  ))} */}
-              {/* parse({description}) */}
               {parse(description)}
-              {/* </p> */}
             </div>
             <div className="singleNav">
               <div className="singleNav__Prev">
