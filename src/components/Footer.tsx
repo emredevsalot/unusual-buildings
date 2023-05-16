@@ -21,8 +21,9 @@ const Footer = () => {
       </p>
       <p className="footer__p2">
         {" "}
-        <Link to="/">Homepage</Link> | <Link to="/">Homepage</Link> |{" "}
-        <Link to="/">Homepage</Link>
+        <Link to="/projects">Projects</Link> |{" "}
+        <Link to="/privacy-policy">Privacy Policy</Link> |{" "}
+        <Link to="/contact">Contact</Link>
       </p>
     </motion.div>
   );

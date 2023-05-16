@@ -67,11 +67,6 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/references" onClick={handleMenuOpened}>
-                References
-              </Link>
-            </li>
-            <li>
               <Link to="/contact" onClick={handleMenuOpened}>
                 Contact
               </Link>

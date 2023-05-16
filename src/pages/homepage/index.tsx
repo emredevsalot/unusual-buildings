@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 
 import Button from "@/components/Button";
+import Footer from "@/components/Footer";
 import { homepageRowData, variantsOpacity } from "@/data";
 
 import HomepageRow from "./HomepageRow";
@@ -74,7 +75,7 @@ const Homepage = () => {
           </div>
         </div>
       </motion.div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

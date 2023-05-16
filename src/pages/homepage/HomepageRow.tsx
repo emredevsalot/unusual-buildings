@@ -58,7 +58,7 @@ const HomepageRow = ({ index, title, description, image }: Props) => {
           backgroundImage: image,
         }}
       ></div>
-      <div className="home2__row__info ml-5">
+      <div className={`home2__row__info ${index % 2 === 0 ? "ml-5" : "mr-5"}`}>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
