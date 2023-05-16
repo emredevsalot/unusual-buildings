@@ -5,22 +5,6 @@ import { motion, useAnimation } from "framer-motion";
 
 import { variantsSlideIn } from "@/data";
 
-// const variantsHomepageRow = {
-//   initial: {
-//     y: 30,
-//     opacity: 0,
-//   },
-//   animate: {
-//     y: 0,
-//     opacity: 1,
-//     transition: { duration: 0.8, ease: "easeInOut" },
-//   },
-//   exit: {
-//     opacity: 0,
-//     transition: { ease: "easeInOut" },
-//   },
-// };
-
 type Props = {
   index: number;
   title: string;

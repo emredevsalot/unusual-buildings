@@ -4,20 +4,7 @@ import { motion } from "framer-motion";
 
 import AnimatedTitle from "@/components/AnimatedTitle";
 import Footer from "@/components/Footer";
-
-const variantsPrivacyPolicy = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: { delay: 0.5 },
-  },
-  exit: {
-    opacity: 0,
-    transition: { delay: 0.5 },
-  },
-};
+import { variantsOpacity } from "@/data";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
@@ -26,7 +13,7 @@ const PrivacyPolicy = () => {
   return (
     <>
       <motion.div
-        variants={variantsPrivacyPolicy}
+        variants={variantsOpacity()}
         initial="initial"
         animate="animate"
         exit="exit"

@@ -4,20 +4,7 @@ import { motion } from "framer-motion";
 import { Map, Marker } from "pigeon-maps";
 
 import Footer from "@/components/Footer";
-
-const variantsContact = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: { delay: 0.5 },
-  },
-  exit: {
-    opacity: 0,
-    transition: { delay: 0.5 },
-  },
-};
+import { variantsOpacity } from "@/data";
 
 const Contact = () => {
   useEffect(() => {
@@ -27,7 +14,7 @@ const Contact = () => {
   return (
     <>
       <motion.div
-        variants={variantsContact}
+        variants={variantsOpacity({ delay: 0.5 })}
         initial="initial"
         animate="animate"
         exit="exit"
