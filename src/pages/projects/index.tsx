@@ -22,12 +22,9 @@ const Projects = () => {
         className="projects"
       >
         <div className="container">
-          <div className="projectsInfo">
-            <div className="projectsInfo__Title">
-              <AnimatedTitle title="Our Projects" />
-            </div>
-
-            <motion.p variants={variantsSlideIn({ initY: 30, delay: 1.3 })}>
+          <div className="projectsTitle">
+            <AnimatedTitle title="Our Projects" />
+            <motion.p variants={variantsSlideIn({ initY: 30, delay: 1.8 })}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
               quaerat blanditiis dignissimos asperiores quis quia cum officiis
               ad deserunt, eos molestiae vel totam adipisci saepe natus nam

@@ -1,14 +1,7 @@
 .projects {
-  span {
-    display: inline-block;
-    position: relative;
-  }
-  h1 {
-    margin-bottom: 20px;
-  }
-  &Info {
+  &Title {
     margin-top: 260px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     width: 85%;
     @include breakpoint(laptop) {
       text-align: center;
@@ -16,12 +9,10 @@
       margin-top: 150px;
       margin-bottom: 30px;
     }
-    &__Title {
-      margin-bottom: 20px;
-      line-height: 1;
-      overflow: hidden;
+    p{
+      margin-top: 20px;
     }
-  }
+  }  
   &Row {
     display: flex;
     min-height: 320px;

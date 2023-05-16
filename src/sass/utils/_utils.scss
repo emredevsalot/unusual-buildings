@@ -12,7 +12,6 @@
     padding: 0 20px;
   }
 }
-
 // White and transparent background of the navbar
 .whiteBg {
   background: $white !important;
@@ -29,5 +28,14 @@
 
   & a {
     color: white;
+  }
+}
+
+.animatedTitle{
+  line-height: 1.2;
+  overflow: hidden;
+  span {
+    display: inline-block;
+    position: relative;
   }
 }

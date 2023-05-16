@@ -172,8 +172,9 @@ type slideInChildType = {
 export const variantsSlideInChild = ({
   initX = 0,
   initY = 0,
-  duration = 1.4,
+  duration = 1.5,
 }: slideInChildType = {}) => ({
   initial: { x: initX, y: initY },
   animate: { x: 0, y: 0, transition: { duration: duration } },
+  exit: { opacity: 0 },
 });

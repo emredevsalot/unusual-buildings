@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Map, Marker } from "pigeon-maps";
 
+import AnimatedTitle from "@/components/AnimatedTitle";
 import Footer from "@/components/Footer";
 import { variantsOpacity } from "@/data";
 
@@ -13,16 +14,18 @@ const Contact = () => {
 
   return (
     <>
-      <motion.div
-        variants={variantsOpacity({ delay: 0.5 })}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        className="contact"
-      >
+      <div className="contact">
         <div className="container">
-          <h1>Contact</h1>
-          <div className="contact__flex">
+          <div className="contactTitle">
+            <AnimatedTitle title="Contact Us" />
+          </div>
+          <motion.div
+            variants={variantsOpacity({ delay: 2 })}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className="contact__flex"
+          >
             <div className="contact__info">
               <p>Lorem ipsum place</p>
               <br />
@@ -46,9 +49,9 @@ const Contact = () => {
                 <Marker width={50} anchor={[50.879, 4.6997]} />
               </Map>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
       <Footer />
     </>
   );

@@ -1,25 +1,13 @@
 .privacyPolicy {
-  span {
-    display: inline-block;
-    position: relative;
-  }
-  h1 {
-    margin-bottom: 20px;
-  }
-  &Info {
+  &Title {
     margin-top: 260px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     width: 85%;
     @include breakpoint(laptop) {
       text-align: center;
       width: 100%;
       margin-top: 150px;
       margin-bottom: 30px;
-    }
-    &__Title {
-      margin-bottom: 20px;
-      line-height: 1;
-      overflow: hidden;
     }
   }
   &__flex {

@@ -1,10 +1,13 @@
 .contact {
-  h1 {
-    // text-align: center;
-    margin-top: 125px;
-    margin-bottom: 50px;
-    @include breakpoint(tablet) {
+  &Title {
+    margin-top: 260px;
+    margin-bottom: 100px;
+    width: 85%;
+    @include breakpoint(laptop) {
       text-align: center;
+      width: 100%;
+      margin-top: 150px;
+      margin-bottom: 30px;
     }
   }
   &__flex {

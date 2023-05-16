@@ -8,8 +8,13 @@ type Props = {
 
 const AnimatedTitle = ({ title }: Props) => {
   return (
-    <h1>
-      <motion.span variants={variantsStaggerParent()}>
+    <h1 className="animatedTitle">
+      <motion.span
+        variants={variantsStaggerParent()}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
         {title.split("").map((letter) => (
           <motion.span variants={variantsSlideInChild({ initY: 350 })}>
             {letter !== " " ? letter : <>&nbsp;</>}
