@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import parse from "html-react-parser";
 
 import Footer from "@/components/Footer";
-import { projectsData } from "@/data";
+import { buildingsData } from "@/data";
 
 import Homepage from "../homepage";
 
@@ -33,14 +33,11 @@ const variantsSingleOverlay = {
   },
   animate: {
     width: "100%",
-    transition: {
-      /*delay: 0.5,*/ duration: 1.5,
-      //   ease: [0.6, 0.01, -0.05, 0.9],
-    },
+    transition: { duration: 1.5, ease: "easeInOut" },
   },
   exit: {
     width: 0,
-    transition: { delay: 1, ease: "easeInOut" },
+    transition: { duration: 1.5, ease: "easeInOut" },
   },
 };
 
@@ -50,30 +47,43 @@ var addressLink = "";
 var previous = "";
 var next = "";
 var image = "";
+var imageCredit = "";
+var imageCreditLink = "";
 var description = "";
-var projectExists = false;
+var buildingExists = false;
 
-const SingleProject = () => {
+const SingleBuilding = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const { projectName } = useParams();
+  const { buildingUrl } = useParams();
 
-  {
-    projectsData.map((project) => {
-      if (project.url == projectName) {
-        name = project.name;
-        address = project.address;
-        addressLink = project.addressLink;
-        previous = project.previous;
-        next = project.next;
-        image = project.image;
-        description = project.description;
-        projectExists = true;
+  buildingsData.map((building) => {
+    if (building.url == buildingUrl) {
+      var buildingIndex = buildingsData.indexOf(building);
+
+      name = building.name;
+      address = building.address;
+      addressLink = building.addressLink;
+      if (buildingIndex == 0) {
+        previous = buildingsData[buildingsData.length - 1].url;
+      } else {
+        previous = buildingsData[buildingIndex - 1].url;
       }
-    });
-  }
-  if (projectExists) {
+      if (buildingIndex == buildingsData.length - 1) {
+        next = buildingsData[0].url;
+      } else {
+        next = buildingsData[buildingIndex + 1].url;
+      }
+      image = building.image;
+      imageCredit = building.imageCredit;
+      imageCreditLink = building.imageCreditLink;
+      description = building.description;
+      buildingExists = true;
+    }
+  });
+
+  if (buildingExists) {
     return (
       <>
         <motion.div
@@ -105,19 +115,19 @@ const SingleProject = () => {
                   color="#140950"
                   size="1x"
                 />
-                <Link to={previous}>
+                <Link to={`/buildings/${previous}`}>
                   <p>Previous</p>
                 </Link>
               </div>
 
-              <div
+              {/* <div
                 className="singleNav__Middle"
                 style={{
                   backgroundImage: `url(${image})`,
                 }}
-              ></div>
+              ></div> */}
               <div className="singleNav__Next">
-                <Link to={next}>
+                <Link to={`/buildings/${next}`}>
                   <p>Next</p>
                 </Link>
                 <FontAwesomeIcon
@@ -127,7 +137,10 @@ const SingleProject = () => {
                 />
               </div>
             </div>
-            <Footer />
+            <div>
+              Photo by <a href={imageCreditLink}>{imageCredit}</a>
+            </div>
+            {/* <Footer /> */}
           </motion.div>
 
           <div className="singleRight">
@@ -147,4 +160,4 @@ const SingleProject = () => {
   }
 };
 
-export default SingleProject;
+export default SingleBuilding;

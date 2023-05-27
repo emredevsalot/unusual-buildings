@@ -8,7 +8,7 @@ import Contact from "./pages/contact";
 import Homepage from "./pages/homepage";
 import PrivacyPolicy from "./pages/privacyPolicy";
 import Projects from "./pages/projects";
-import SingleProject from "./pages/singleProject";
+import SingleBuilding from "./pages/singleBuilding";
 
 function App() {
   const routes = useRoutes([
@@ -25,8 +25,8 @@ function App() {
       element: <PrivacyPolicy />,
     },
     {
-      path: "/projects/:projectName",
-      element: <SingleProject />,
+      path: "/buildings/:buildingUrl",
+      element: <SingleBuilding />,
     },
     {
       path: "/contact",
