@@ -105,6 +105,9 @@
       right: auto;
       bottom: 0%;
       width: 100%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
       background-color: #e8e8e8;
       @include breakpoint(laptop) {
         display: none;
@@ -149,6 +152,10 @@
   display: none;
   @include breakpoint(laptop) {
     // text-align: center;
+    height: 50vh;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
     display: block;
     margin-top: 10px;
     // padding-bottom: 20px;

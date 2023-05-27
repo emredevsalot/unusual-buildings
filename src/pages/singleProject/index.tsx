@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { ReactImageGalleryItem } from "react-image-gallery";
 import { Link, useParams } from "react-router-dom";
 
 import {
@@ -11,7 +10,6 @@ import { motion } from "framer-motion";
 import parse from "html-react-parser";
 
 import Footer from "@/components/Footer";
-import Slider from "@/components/Slider";
 import { projectsData } from "@/data";
 
 import Homepage from "../homepage";
@@ -51,7 +49,7 @@ var address = "";
 var addressLink = "";
 var previous = "";
 var next = "";
-var images: ReadonlyArray<ReactImageGalleryItem> = [{ original: "" }];
+var image = "";
 var description = "";
 var projectExists = false;
 
@@ -69,7 +67,7 @@ const SingleProject = () => {
         addressLink = project.addressLink;
         previous = project.previous;
         next = project.next;
-        images = project.images;
+        image = project.image;
         description = project.description;
         projectExists = true;
       }
@@ -92,9 +90,12 @@ const SingleProject = () => {
                   {address}
                 </a>
               </h3>
-              <div className="laptopSlider">
-                <Slider images={images} />
-              </div>
+              <div
+                className="laptopSlider"
+                style={{
+                  backgroundImage: `url(${image})`,
+                }}
+              ></div>
               {parse(description)}
             </div>
             <div className="singleNav">
@@ -112,7 +113,7 @@ const SingleProject = () => {
               <div
                 className="singleNav__Middle"
                 style={{
-                  backgroundImage: `url('/assets/hero-image.jpg')`,
+                  backgroundImage: `url(${image})`,
                 }}
               ></div>
               <div className="singleNav__Next">
@@ -131,14 +132,11 @@ const SingleProject = () => {
 
           <div className="singleRight">
             <motion.div
-              className="singleRight__Slider"
-              variants={variantsSingleLeft}
-            >
-              <Slider images={images} />
-            </motion.div>
-            <motion.div
               className="singleRight__Overlay"
               variants={variantsSingleOverlay}
+              style={{
+                backgroundImage: `url(${image})`,
+              }}
             ></motion.div>
           </div>
         </motion.div>

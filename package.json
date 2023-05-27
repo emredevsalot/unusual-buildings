@@ -13,13 +13,11 @@
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@types/react-image-gallery": "^1.2.0",
     "framer-motion": "^10.12.4",
     "html-react-parser": "^3.0.16",
     "pigeon-maps": "^0.21.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-image-gallery": "^1.2.11",
     "react-intersection-observer": "^9.4.3",
     "react-router-dom": "^6.11.0"
   },
