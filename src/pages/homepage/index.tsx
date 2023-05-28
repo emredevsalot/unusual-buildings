@@ -25,11 +25,11 @@ const Homepage = () => {
               <div
                 className="homepageBuildingContainer"
                 style={{
-                  backgroundImage: `url(${building.image})`,
+                  backgroundImage: `linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(${building.image})`,
                 }}
                 key={index}
               >
-                <div className="homepageBuildingName">{building.name}</div>
+                <div>{building.name}</div>
               </div>
             ))}
           </div>
