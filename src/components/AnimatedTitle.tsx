@@ -16,8 +16,11 @@ const AnimatedTitle = ({ title }: Props) => {
           animate="animate"
           exit="exit"
         >
-          {title.split("").map((letter) => (
-            <motion.span variants={variantsSlideInChild({ initY: 350 })}>
+          {title.split("").map((letter, index) => (
+            <motion.span
+              variants={variantsSlideInChild({ initY: 350 })}
+              key={index}
+            >
               {letter !== " " ? letter : <>&nbsp;</>}
             </motion.span>
           ))}

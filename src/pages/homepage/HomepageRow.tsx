@@ -39,7 +39,7 @@ const HomepageRow = ({ index, title, description, image }: Props) => {
       <div
         className="home2__row__icon"
         style={{
-          backgroundImage: image,
+          backgroundImage: `url(${image})`,
         }}
       ></div>
       <div className={`home2__row__info ${index % 2 === 0 ? "ml-5" : "mr-5"}`}>
