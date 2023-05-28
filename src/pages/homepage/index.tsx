@@ -29,7 +29,7 @@ const Homepage = () => {
                 }}
                 key={index}
               >
-                <div>{building.name}</div>
+                <span>{building.name}</span>
               </div>
             ))}
           </div>
