@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
@@ -22,15 +23,17 @@ const Homepage = () => {
           <AnimatedTitle title="Unusual Buildings" />
           <div className="homepageBuildingsContainer">
             {buildingsData.map((building, index) => (
-              <div
-                className="homepageBuildingContainer"
-                style={{
-                  backgroundImage: `linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(${building.image})`,
-                }}
-                key={index}
-              >
-                <span>{building.name}</span>
-              </div>
+              <Link to={`/buildings/${building.url}`}>
+                <div
+                  className="homepageBuildingContainer"
+                  style={{
+                    backgroundImage: `linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(${building.image})`,
+                  }}
+                  key={index}
+                >
+                  <span>{building.name}</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
