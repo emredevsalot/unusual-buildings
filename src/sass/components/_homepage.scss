@@ -1,4 +1,14 @@
 .homepage {
+  &Hero {
+    margin-top: 180px;
+    margin-bottom: 120px;
+  }
+  &Description {
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    margin-bottom: 30px;
+  }
   &BuildingsContainer {
     margin: 0 auto;
     display: grid;

@@ -11,9 +11,6 @@
     justify-content: space-between;
     height: 80px;
     align-items: center;
-    & a {
-      background: none;
-    }
   }
 
   &__left {
@@ -23,6 +20,14 @@
       z-index: 10;
       width: 60px;
       height: auto;
+    }
+  }
+  &__logoText {
+    font-family: "PT Serif", serif;
+    font-size: 3rem;
+    font-weight: 900;
+    @include breakpoint(laptop) {
+      font-size: 2rem;
     }
   }
   &__right {
@@ -60,7 +65,7 @@
       color: $primary;
       text-decoration: none;
       padding: 12px 7px;
-      font-family: 'PT Serif', serif;
+      font-family: "PT Serif", serif;
       font-size: 18px;
       text-decoration: none;
       transition: all 0.6s ease;

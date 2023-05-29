@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 
 import { variantsOpacity } from "@/data";
 
+// import Button from "./Button";
+
 const Navbar = () => {
   const [scrolledNav, setScrolledNav] = useState(false);
   const [menuOpened, setMenuOpened] = useState(false);
@@ -38,14 +40,15 @@ const Navbar = () => {
         <div className="navbar__content">
           <Link to="/" onClick={handleMenuOpened}>
             <div className="navbar__left">
-              <img
+              {/* <img
                 src={`${
                   scrolledNav
                     ? "/assets/hero-image.jpg"
                     : "/assets/hero-image.jpg"
                 }`}
                 alt="logo"
-              />
+              /> */}
+              <div className="navbar__logoText">U.B.</div>
             </div>
           </Link>
           <div className="navbar__icon" onClick={handleMenuOpened}>
@@ -56,7 +59,7 @@ const Navbar = () => {
             />
           </div>
           <ul className={menuOpened ? "navbar__right active" : "navbar__right"}>
-            <li>
+            {/* <li>
               <Link to="/" onClick={handleMenuOpened}>
                 Home
               </Link>
@@ -70,7 +73,13 @@ const Navbar = () => {
               <Link to="/contact" onClick={handleMenuOpened}>
                 Contact
               </Link>
-            </li>
+            </li> */}
+            {/* <li>
+              <Link to="/about" onClick={handleMenuOpened}>
+                About
+              </Link>
+            </li> */}
+            {/* <Button url="/about" text="About" /> */}
           </ul>
         </div>
       </div>

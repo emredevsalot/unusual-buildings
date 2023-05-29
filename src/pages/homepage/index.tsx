@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import AnimatedTitle from "@/components/AnimatedTitle";
+import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import { buildingsData, variantsOpacity } from "@/data";
 
@@ -20,8 +21,23 @@ const Homepage = () => {
         exit="exit"
       >
         <div className="container">
-          <AnimatedTitle title="Unusual Buildings" />
-          <div className="homepageBuildingsContainer">
+          <div className="homepageHero">
+            <AnimatedTitle title="Unusual Buildings" />
+            <motion.div variants={variantsOpacity({ delay: 2.5 })}>
+              <p className="homepageDescription">
+                Welcome to the world of unusual buildings! Step into a
+                captivating journey through a collection of the most remarkable
+                and unconventional buildings from around the globe. Our website
+                is dedicated to showcasing the wonders of architectural
+                innovation and pushing the boundaries of design.
+              </p>
+              <Button url="/random" text="Random Building" />
+            </motion.div>
+          </div>
+          <motion.div
+            className="homepageBuildingsContainer"
+            variants={variantsOpacity({ delay: 2.5 })}
+          >
             {buildingsData.map((building, index) => (
               <Link to={`/buildings/${building.url}`}>
                 <div
@@ -35,7 +51,7 @@ const Homepage = () => {
                 </div>
               </Link>
             ))}
-          </div>
+          </motion.div>
         </div>
       </motion.div>
       {/* <Footer /> */}
