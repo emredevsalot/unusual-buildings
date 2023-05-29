@@ -1,16 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
 import AnimatedTitle from "@/components/AnimatedTitle";
 import Button from "@/components/Button";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 import { buildingsData, variantsOpacity } from "@/data";
 
 const Homepage = () => {
+  const [randomBuilding, setRandomBuilding] = useState(0);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    setRandomBuilding(Math.floor(Math.random() * buildingsData.length));
   }, []);
   return (
     <>
@@ -31,7 +34,10 @@ const Homepage = () => {
                 is dedicated to showcasing the wonders of architectural
                 innovation and pushing the boundaries of design.
               </p>
-              <Button url="/random" text="Random Building" />
+              <Button
+                url={`/buildings/${buildingsData[randomBuilding].url}`}
+                text="Random Building"
+              />
             </motion.div>
           </div>
           <motion.div
