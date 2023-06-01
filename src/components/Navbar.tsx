@@ -38,7 +38,7 @@ const Navbar = () => {
     >
       <div className="container">
         <div className="navbar__content">
-          <Link to="/" onClick={handleMenuOpened}>
+          <Link to="/unusual-buildings" onClick={handleMenuOpened}>
             <div className="navbar__left">
               <div className="navbar__logoText">U.B.</div>
             </div>

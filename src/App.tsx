@@ -11,15 +11,15 @@ import SingleBuilding from "./pages/singleBuilding";
 function App() {
   const routes = useRoutes([
     {
-      path: "/",
+      path: "/unusual-buildings/",
       element: <Homepage />,
     },
     {
-      path: "/buildings/:buildingUrl",
+      path: "/unusual-buildings/buildings/:buildingUrl",
       element: <SingleBuilding />,
     },
     {
-      path: "/contact",
+      path: "/unusual-buildings/contact",
       element: <Contact />,
     },
   ]);

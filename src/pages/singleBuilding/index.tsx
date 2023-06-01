@@ -115,7 +115,7 @@ const SingleBuilding = () => {
                   color="#140950"
                   size="1x"
                 />
-                <Link to={`/buildings/${previous}`}>
+                <Link to={`/unusual-buildings/buildings/${previous}`}>
                   <p>Previous</p>
                 </Link>
               </div>
@@ -127,7 +127,7 @@ const SingleBuilding = () => {
                 }}
               ></div> */}
               <div className="singleNav__Next">
-                <Link to={`/buildings/${next}`}>
+                <Link to={`/unusual-buildings/buildings/${next}`}>
                   <p>Next</p>
                 </Link>
                 <FontAwesomeIcon

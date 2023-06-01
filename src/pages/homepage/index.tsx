@@ -35,7 +35,7 @@ const Homepage = () => {
                 innovation and pushing the boundaries of design.
               </p>
               <Button
-                url={`/buildings/${buildingsData[randomBuilding].url}`}
+                url={`/unusual-buildings/buildings/${buildingsData[randomBuilding].url}`}
                 text="Random Building"
               />
             </motion.div>
@@ -45,7 +45,10 @@ const Homepage = () => {
             variants={variantsOpacity({ delay: 2.5 })}
           >
             {buildingsData.map((building, index) => (
-              <Link key={index} to={`/buildings/${building.url}`}>
+              <Link
+                key={index}
+                to={`/unusual-buildings/buildings/${building.url}`}
+              >
                 <div
                   className="homepageBuildingContainer"
                   style={{
