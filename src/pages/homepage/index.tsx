@@ -49,7 +49,7 @@ const Homepage = () => {
                 <div
                   className="homepageBuildingContainer"
                   style={{
-                    backgroundImage: `linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(${building.image})`,
+                    backgroundImage: `linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(${building.imageSmall})`,
                   }}
                   key={index}
                 >
