@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import parse from "html-react-parser";
 
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 import { buildingsData } from "@/data";
 
 import Homepage from "../homepage";
