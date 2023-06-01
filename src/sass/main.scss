@@ -1,29 +1,24 @@
 // import abstracts
-@import 'abstracts/variables';
+@import "abstracts/variables";
 
 // bgImage($image) / flexCenter / responsive($width)
-@import 'abstracts/mixins';
+@import "abstracts/mixins";
 
 // headings and body font attributes
-@import 'base/base';
+@import "base/base";
 
 // import utils
 // container / white and transparent navbar
-@import 'utils/utils';
+@import "utils/utils";
 
 // import layout
 // col-1 ... col-12 according to the 12 column design principles / row / padding 20
-@import 'layout/grid';
+@import "layout/grid";
 
 // import components
-@import 'components/button';
-@import 'components/dataprotection';
-@import 'components/footer';
-@import 'components/homepage';
-@import 'components/privacypolicy';
-@import 'components/contact';
-@import 'components/projects';
-@import 'components/single';
-@import 'components/navbar';
-// @import 'components/services';
-// @import 'components/serviceInfo';
+@import "components/button";
+@import "components/contact";
+@import "components/footer";
+@import "components/homepage";
+@import "components/navbar";
+@import "components/single";

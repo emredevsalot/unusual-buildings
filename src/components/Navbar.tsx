@@ -40,14 +40,6 @@ const Navbar = () => {
         <div className="navbar__content">
           <Link to="/" onClick={handleMenuOpened}>
             <div className="navbar__left">
-              {/* <img
-                src={`${
-                  scrolledNav
-                    ? "/assets/hero-image.jpg"
-                    : "/assets/hero-image.jpg"
-                }`}
-                alt="logo"
-              /> */}
               <div className="navbar__logoText">U.B.</div>
             </div>
           </Link>
@@ -64,21 +56,6 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="/projects" onClick={handleMenuOpened}>
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" onClick={handleMenuOpened}>
-                Contact
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link to="/about" onClick={handleMenuOpened}>
-                About
-              </Link>
-            </li> */}
             {/* <Button url="/about" text="About" /> */}
           </ul>
         </div>

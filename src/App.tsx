@@ -6,8 +6,6 @@ import { AnimatePresence } from "framer-motion";
 import "../src/sass/main.scss";
 import Contact from "./pages/contact";
 import Homepage from "./pages/homepage";
-import PrivacyPolicy from "./pages/privacyPolicy";
-import Projects from "./pages/projects";
 import SingleBuilding from "./pages/singleBuilding";
 
 function App() {
@@ -15,14 +13,6 @@ function App() {
     {
       path: "/",
       element: <Homepage />,
-    },
-    {
-      path: "/projects",
-      element: <Projects />,
-    },
-    {
-      path: "/privacy-policy",
-      element: <PrivacyPolicy />,
     },
     {
       path: "/buildings/:buildingUrl",

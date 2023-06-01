@@ -45,13 +45,12 @@ const Homepage = () => {
             variants={variantsOpacity({ delay: 2.5 })}
           >
             {buildingsData.map((building, index) => (
-              <Link to={`/buildings/${building.url}`}>
+              <Link key={index} to={`/buildings/${building.url}`}>
                 <div
                   className="homepageBuildingContainer"
                   style={{
                     backgroundImage: `linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(${building.imageSmall})`,
                   }}
-                  key={index}
                 >
                   <span>{building.name}</span>
                 </div>
